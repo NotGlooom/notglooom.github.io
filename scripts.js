@@ -25,6 +25,8 @@ function creerCarte(recette) {
 //Par contre j'ai réaliser par après que si je suprimme une recette les ids vont pas automatiquement se régler donc ça se peux que je rentre un mauvais ID dans le localstorage.
 //Donc je vais laisser faire.
 let qterecettes = 0
+
+// Fonction pour ajouter
 function affichertout() {
     qterecettes = 0
     $("#divrecettes").text("")
@@ -50,11 +52,12 @@ function affichertout() {
         });
 }
 
+//Appel la fonction lors du load up
 affichertout()
 
 //caché les boutons suprimmer
 function cachesup() {
-
+    //pas eu le temps
 }
 
 //Constructeur de recette
@@ -111,12 +114,12 @@ function ajouter() {
         body: JSON.stringify(recette)
     }).then(res => {
         if (res.ok) {
-            // Create a success message element
+            // Créer un message de succès
             const successMessage = document.createElement('div');
             successMessage.className = 'alert alert-success mt-3';
             successMessage.innerHTML = 'La recette à été ajoutée!';
 
-            // Append the success message to the main container
+            // Ajouter à un div
             $('#message').append(successMessage);
 
             // Remove the success message after a delay (e.g., 3 seconds)
@@ -124,6 +127,7 @@ function ajouter() {
                 $(successMessage).remove();
             }, 3000);
 
+            //Sauvegarder la clé de la nouvelle recette
             localStorage.key(qterecettes++)
             affichertout();
 
@@ -132,6 +136,7 @@ function ajouter() {
         }
         throw new Error("Erreur " + res.status);
     }).then(task => {
+        //vider tous les champs.
         $("#nom").val("")
         $("#ing-1").val("")
         $("#ing-2").val("")
