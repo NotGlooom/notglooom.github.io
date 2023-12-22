@@ -22,7 +22,7 @@ function creerCarte(recette) {
     </div>`);
 }
 //Va servir a compter les recettes pour facilité le travail de trouver le id lors d'un ajout.
-//Par contre j'ai réaliser par après que si je suprimme une recette les ids vont pas automatiquement se régler donc ça se peux que je rentre un mauvais ID dans le localstorage.
+//Par contre j'ai réaliser par après que si je supprime une recette les ids vont pas automatiquement se régler donc ça se peux que je rentre un mauvais ID dans le localstorage.
 //Donc je vais laisser faire.
 let qterecettes = 0
 
@@ -154,7 +154,7 @@ function ajouter() {
     })
 }
 
-//Fonction pour suprimmer
+//Fonction pour supprimer
 function supprimer(id) {
     fetch('https://658588ee022766bcb8c8d70b.mockapi.io/recettes/'+id, {
         method: 'DELETE',
