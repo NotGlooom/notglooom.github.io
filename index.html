@@ -48,12 +48,13 @@
                         <label for="instructions" class="form-label">Instructions</label>
                         <textarea class="form-control" id="instructions"></textarea>
                     </div>
-                    <input type="number" class="form-control mb-3" style="width:180px" placeholder="Entrez votre UserId" id="userid" required>
                     <button type="submit" class="btn btn-primary">Ajouter la recette</button>
+                    <div id="message"></div>
                 </form>
+                <p class="alert alert-danger d-none" role="alert"></p>
 
             </div>
-            <div class="col">
+            <div id="divrecettes" class="col">
                 <h1>Recettes</h1>
             </div>
         </div>
