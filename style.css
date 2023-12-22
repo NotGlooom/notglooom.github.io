@@ -1,0 +1,15 @@
+#titre {
+    margin-bottom: 100px;
+    background-color: lightgray;
+    width: 100%;
+}
+
+
+.check {
+    color: #f54b4b;
+    font-weight: bold;
+}
+
+#qte-1 {
+    margin-top: 31px;
+}
